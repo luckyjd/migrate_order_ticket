@@ -68,9 +68,9 @@ def gen_df(orders_path, tickets_path):
     tickets_df['price'] = (tickets_df['cost'] + tickets_df['fee']).apply(price_to_cents)
 
     # Drop column after transform done
-    tickets_df.drop(columns=['TID', 'OID', 'utc_timestamp', 'cost', 'fee'], inplace=True)
-    orders_df.drop(columns=['OID', 'EID', 'cost', 'fee', 'address3', 'country'], inplace=True)
-    events_df.drop(columns=['EID'], inplace=True)
+    # tickets_df.drop(columns=['TID', 'OID', 'utc_timestamp', 'cost', 'fee'], inplace=True)
+    # orders_df.drop(columns=['OID', 'EID', 'cost', 'fee', 'address3', 'country'], inplace=True)
+    # events_df.drop(columns=['EID'], inplace=True)
 
     # order columns, that make columns in sql query in order.
     events_df = events_df[event_column]

@@ -1,3 +1,3 @@
-INSERT INTO events (id, name) VALUES ('31542e20-eb0d-4e8a-9071-25682909db67', 'Event 4') ON DUPLICATE KEY UPDATE id = VALUES(id), name = VALUES(name);
-INSERT INTO events (id, name) VALUES ('fe36e60a-384d-4785-a9f6-6b6464bdd023', 'Event 72') ON DUPLICATE KEY UPDATE id = VALUES(id), name = VALUES(name);
-INSERT INTO events (id, name) VALUES ('288b6e25-e4ef-4e71-8138-c889deac9a91', 'Event 11') ON DUPLICATE KEY UPDATE id = VALUES(id), name = VALUES(name);
+INSERT INTO events (id, name) VALUES ('a3ba5ea6-d54a-477d-b65e-7d5bc1e6b802', 'Event 4');
+INSERT INTO events (id, name) VALUES ('1597b1a3-3715-4f7c-86b3-5c18a58b72e0', 'Event 72');
+INSERT INTO events (id, name) VALUES ('72de45f8-b7db-4187-8f1c-bb602ae5f24b', 'Event 11');
