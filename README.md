@@ -62,6 +62,9 @@ TID,OID,utc_timestamp,barcode,cost,fee
 * Note: cost value in tickets and orders, there are a slight mismatch in value `79.5 + 79.5 != 159.9` ???? 
 
 # Script in main.py
+- put input source csv file in /input 
+- `python main.py`
+- output file at /output 
 
 # Addressing the Specific Points 
 
