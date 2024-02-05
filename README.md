@@ -37,6 +37,7 @@ would you deem necessary or helpful to this import task if any?
 ### source_orders.csv
 
 OID,EID,cost,fee,address1,address2,address3,country
+
 1,4,399.96,20,123 main st,shek kip mei,kowloon,hong kong
 2,72,159.9,10,40 boundary rd,tsim sha tsui,kowloon,hong kong
 3,72,159.9,10,1288 Lianhua Road,Futian District,"Shenzhen, Guangdong",china
@@ -67,6 +68,9 @@ TID,OID,utc_timestamp,barcode,cost,fee
 ### Data Gaps: 
 - The source data might lack direct mappings for `created` and `completed` timestamps in the Order table, requiring assumptions or default values. 
 At this script, it is assumed to use the current time `datetime.now().strftime('%Y-%m-%d %H:%M:%S+0000')`.
+- Mapping `country` in source_order to `country_code` (choices=[HK, MO, CN])
+- Do not have source_events, so generate new UUID for event. Need to ensure consistency in UUID assignment, especially for linking orders to events and tickets to orders.
+- `utc_timestamp` convert to datetime format.
 
 ### Schema Limitations: 
 - The presence of an `address3` field in the source which doesn't exist in the target schema, so suggests combining `address2` and `address3` or using one over the other.
